@@ -1,0 +1,15 @@
+﻿@model List<Guest>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the party</h1>
+    <h4>Not signed up? </h4><a href="@Url.Action("SignUp")">Sign up</a>
+    <div class="flex-column">
+        @foreach (var guest in Model)
+        {
+            <p>@guest.Name</p>
+        }
+    </div>
+</div>
